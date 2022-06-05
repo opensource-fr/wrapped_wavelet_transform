@@ -1,6 +1,6 @@
 `default_nettype none
 `ifdef FORMAL
-    `define MPRJ_IO_PADS 38    
+    `define MPRJ_IO_PADS 38
 `endif
 
 //`define USE_WB  1
@@ -68,7 +68,7 @@ module wrapped_project(
     // extra user clock
     input wire user_clock2,
 `endif
-    
+
     // active input, only connect tristated outputs if this is high
     input wire active
 );
@@ -118,7 +118,7 @@ module wrapped_project(
     `include "properties.v"
     `else
     // tristate buffers
-    
+
     `ifdef USE_WB
     assign wbs_ack_o    = active ? buf_wbs_ack_o    : 1'bz;
     assign wbs_dat_o    = active ? buf_wbs_dat_o    : 32'bz;
@@ -148,9 +148,9 @@ module wrapped_project(
     // permanently set oeb so that outputs are always enabled: 0 is output, 1 is high-impedance
     assign buf_io_oeb = {`MPRJ_IO_PADS{1'b0}};
 
-    // Instantiate your module here, 
-    // connecting what you need of the above signals. 
+    // Instantiate your module here,
+    // connecting what you need of the above signals.
     // Use the buffered outputs for your module's outputs.
 
-endmodule 
+endmodule
 `default_nettype wire
