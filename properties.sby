@@ -5,10 +5,13 @@ mode prove
 smtbmc
 
 [script]
-read -formal wrapper.v rest of your source files.v
-prep -top wrapped_project
+read -formal wrapper.v wavelet_transform.v fir.v output_multiplexer.v shift_register_line.v
+prep -top wrapped_wavelet_transform
 
 [files]
 wrapper.v
 properties.v
-rest of your source files.v
+wavelet_transform/src/fir.v
+wavelet_transform/src/output_multiplexer.v
+wavelet_transform/src/shift_register_line.v
+wavelet_transform/src/wavelet_transform.v
