@@ -2,9 +2,14 @@
 
 ![gtkwave screencapture](./docs/gtkwave_of_wt.png)
 
-This repo has a wavelet transform targeting a stream of 8-bit inputs.
+This repo has rtl and scripts for wavelet transform targeting a stream of 8-bit
+inputs for submission with the MPW6 shuttle as part of the [Zero to ASIC
+Course](https://zerotoasiccourse.com).
 
-See following sections for usage and details about the transform.
+A wavelet transform is like a fourier transform, but has some very advantageous
+properties ([see this readme section for more details](#Some Interesting Properties)).
+
+For usage details about the transform see the following sections.
 
 ## Usage: Clocking in Input Bytes and Reading Output Byes
 
