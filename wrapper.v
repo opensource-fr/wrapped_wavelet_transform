@@ -162,7 +162,7 @@ wavelet_transform wavelet_transform (
 `endif
 
     .clk(wb_clk_i),
-    .rst(la1_data_in[0]), //TODO: update this in the tests
+    .rst(la1_data_in[0]),
 
     // NOTE: Can only have so many pins, avoid io's 0-7
     .i_data_clk(io_in[8]),
@@ -170,7 +170,6 @@ wavelet_transform wavelet_transform (
     .i_select_output_channel(io_in[24:17]),
     .o_multiplexed_wavelet_out(buf_io_out[32:25]),
     .o_active(buf_io_out[33])
-    // TODO: do we need to delete io_oeb from wavelet_transform?
 
 );
 
