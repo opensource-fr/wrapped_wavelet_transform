@@ -11,11 +11,10 @@ project:
 interfaces: ['la1', 'gpio']
 
 # test within caravel
-# TODO: ask matt for project id
 caravel_test:
   recipe: "coco_test"
   directory: "test_wavelet_transform"
-  id: 0
+  id: 8
   module_name: "wrapped_wavelet_transform"
 
 # module test
