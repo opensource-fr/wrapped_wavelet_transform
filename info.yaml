@@ -39,7 +39,6 @@ source:
     - wavelet_transform/src/shift_register_line.v
     - wavelet_transform/src/fir.v
     - wavelet_transform/src/output_multiplexer.v
-    - other source files here
 
 # gds - check nothing on metal 5, DRC & LVS
 final:

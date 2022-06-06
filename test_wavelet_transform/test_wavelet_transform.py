@@ -149,11 +149,11 @@ async def test_modulated_sine(dut):
             dut.i_data_clk.value = 0
 
             if (dut.i_select_output_channel.value == 0):
-                assert(dut.o_multiplexed_wavelet_out == dut.uut.mprj.wrapped_wavelet_transform.wavelet_transform.fir_0.o_wavelet.value)
+                assert(dut.o_multiplexed_wavelet_out == dut.uut.mprj.wrapped_wavelet_transform_8.wavelet_transform.fir_0.o_wavelet.value)
             if (dut.i_select_output_channel.value == 1):
-                assert(dut.o_multiplexed_wavelet_out == dut.uut.mprj.wrapped_wavelet_transform.wavelet_transform.fir_1.o_wavelet.value)
+                assert(dut.o_multiplexed_wavelet_out == dut.uut.mprj.wrapped_wavelet_transform_8.wavelet_transform.fir_1.o_wavelet.value)
             if (dut.i_select_output_channel.value == 2):
-                assert(dut.o_multiplexed_wavelet_out == dut.uut.mprj.wrapped_wavelet_transform.wavelet_transform.fir_2.o_wavelet.value)
+                assert(dut.o_multiplexed_wavelet_out == dut.uut.mprj.wrapped_wavelet_transform_8.wavelet_transform.fir_2.o_wavelet.value)
             # if (dut.i_select_output_channel.value == 3):
             #     assert(dut.o_multiplexed_wavelet_out == dut.uut.mprj.wrapped_wavelet_transform.wavelet_transform.fir_3.o_wavelet.value)
             # if (dut.i_select_output_channel.value == 4):
