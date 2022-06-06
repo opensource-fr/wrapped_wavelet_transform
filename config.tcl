@@ -24,7 +24,7 @@ set ::env(VERILOG_FILES) "$::env(DESIGN_DIR)/wrapper.v \
     $::env(DESIGN_DIR)/wavelet_transform/src/output_multiplexer.v"
 
 # target density, change this if you can't get your design to fit
-set ::env(PL_TARGET_DENSITY) 0.50
+set ::env(PL_TARGET_DENSITY) 0.60
 
 # don't put clock buffers on the outputs, need tristates to be the final cells
 set ::env(PL_RESIZER_BUFFER_OUTPUT_PORTS) 0
