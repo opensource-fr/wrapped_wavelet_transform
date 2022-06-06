@@ -1,21 +1,23 @@
 ---
 # information
+# TODO: create and place image
 project:
-  title: "title"
-  description: "description"
-  picture: docs/empty.png
-  author: "Author"
+  title: "Wavelet Transform"
+  description: "Implementation Wavelet Transform with 3 filter banks"
+  picture: docs/gds_image.png
+  author: "Gregory Kielian"
   license: LICENSE
 
 # optional interfaces you want to use: gpio, la1, la2, la3, irq, clk2, wishbone & openram
 interfaces: ['la1', 'gpio']
 
 # test within caravel
+# TODO: ask matt for project id
 caravel_test:
   recipe: "coco_test"
-  directory: "caravel_test"
-  id: 1
-  module_name: "wrapped_project"
+  directory: "test_wavelet_transform"
+  id: 0
+  module_name: "wrapped_wavelet_transform"
 
 # module test
 module_test:
@@ -35,9 +37,14 @@ openlane:
 # source required for various configs and module instantiation
 source:
     - wrapper.v
+    - wavelet_transform/src/wavelet_transform.v
+    - wavelet_transform/src/shift_register_line.v
+    - wavelet_transform/src/fir.v
+    - wavelet_transform/src/output_multiplexer.v
     - other source files here
 
 # gds - check nothing on metal 5, DRC & LVS
+# TODO: check these locations
 final:
   directory: "final"
   gds_filename: "gds/project.gds"
