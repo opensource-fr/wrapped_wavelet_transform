@@ -1,6 +1,6 @@
 # Wavelet Transform
 
-[image](./docs/gtkwave_of_wt.png)
+![gtkwave screencapture](./docs/gtkwave_of_wt.png)
 
 This repo has a wavelet transform targeting a stream of 8-bit inputs.
 
