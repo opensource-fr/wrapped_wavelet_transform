@@ -154,10 +154,10 @@ async def test_modulated_sine(dut):
                 assert(dut.o_multiplexed_wavelet_out == dut.uut.mprj.wrapped_wavelet_transform.wavelet_transform.fir_1.o_wavelet.value)
             if (dut.i_select_output_channel.value == 2):
                 assert(dut.o_multiplexed_wavelet_out == dut.uut.mprj.wrapped_wavelet_transform.wavelet_transform.fir_2.o_wavelet.value)
-            if (dut.i_select_output_channel.value == 3):
-                assert(dut.o_multiplexed_wavelet_out == dut.uut.mprj.wrapped_wavelet_transform.wavelet_transform.fir_3.o_wavelet.value)
-            if (dut.i_select_output_channel.value == 4):
-                assert(dut.o_multiplexed_wavelet_out == dut.uut.mprj.wrapped_wavelet_transform.wavelet_transform.fir_4.o_wavelet.value)
+            # if (dut.i_select_output_channel.value == 3):
+            #     assert(dut.o_multiplexed_wavelet_out == dut.uut.mprj.wrapped_wavelet_transform.wavelet_transform.fir_3.o_wavelet.value)
+            # if (dut.i_select_output_channel.value == 4):
+            #     assert(dut.o_multiplexed_wavelet_out == dut.uut.mprj.wrapped_wavelet_transform.wavelet_transform.fir_4.o_wavelet.value)
             # if (dut.i_select_output_channel.value == 5):
             #     assert(dut.o_multiplexed_wavelet_out == dut.uut.mprj.wrapped_wavelet_transform.wavelet_transform.fir_5.o_wavelet.value)
             # if (dut.i_select_output_channel.value == 6):
