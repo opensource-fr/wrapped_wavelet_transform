@@ -20,7 +20,7 @@ caravel_test:
 
 # module test
 module_test:
-  recipe: "all"
+  recipe: "test_wt"
   directory: "wavelet_transform"
   makefile: "Makefile"
 
