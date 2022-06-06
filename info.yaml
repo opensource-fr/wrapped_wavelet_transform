@@ -1,6 +1,6 @@
---- 
+---
 # information
-project: 
+project:
   title: "title"
   description: "description"
   picture: docs/empty.png
@@ -19,7 +19,7 @@ caravel_test:
 
 # module test
 module_test:
-  recipe: "all" 
+  recipe: "all"
   directory: "project directory"
   makefile: "Makefile"
 
