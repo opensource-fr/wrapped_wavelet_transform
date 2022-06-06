@@ -11,7 +11,7 @@
 //`define USE_IRQ 1
 
 // update this to the name of your module
-module wrapped_project(
+module wrapped_wavelet_transform(
 `ifdef USE_POWER_PINS
     inout vccd1,	// User area 1 1.8V supply
     inout vssd1,	// User area 1 digital ground
@@ -151,6 +151,28 @@ module wrapped_project(
     // Instantiate your module here,
     // connecting what you need of the above signals.
     // Use the buffered outputs for your module's outputs.
+
+/*--------------------------------------*/
+/* User project is instantiated  here   */
+/*--------------------------------------*/
+wavelet_transform wavelet_transform (
+`ifdef USE_POWER_PINS
+	.vccd1(vccd1),	// User area 1 1.8V power
+	.vssd1(vssd1),	// User area 1 digital ground
+`endif
+
+    .clk(wb_clk_i),
+    .rst(la1_data_in[0]), //TODO: update this in the tests
+
+    // NOTE: Can only have so many pins, avoid io's 0-7
+    .i_data_clk(io_in[8]),
+    .i_value(io_in[16:9]),
+    .i_select_output_channel(io_in[24:17]),
+    .o_multiplexed_wavelet_out(buf_io_out[32:25]),
+    .o_active(buf_io_out[33])
+    // TODO: do we need to delete io_oeb from wavelet_transform?
+
+);
 
 endmodule
 `default_nettype wire
