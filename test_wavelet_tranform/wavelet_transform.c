@@ -91,6 +91,7 @@ void main()
 
     // reset
     /* reg_la1_oenb = 1; // is an output */
+    // QUESTION: ask about this line
     reg_la1_oenb = 0xffffffff; // is an output
     reg_la1_iena = 0; // is not an input
     reg_la1_data = 1;
